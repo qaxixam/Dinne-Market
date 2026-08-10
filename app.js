@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const menuBtn = document.getElementById("menuBtn");
 
 const closeBtn = document.getElementById("closeBtn");
@@ -60,7 +60,7 @@ mobileLinks.forEach((link) => {
     link.addEventListener("click", closeMenu);
 
 });
-=======
+
 async function ApiData() {
     let response = await fetch('https://fakestoreapi.com/products');
     let data = await response.json();
@@ -84,4 +84,4 @@ async function ApiData() {
 }
 
 ApiData();
->>>>>>> c616a835526f9694e71c8287035138965ed3db7b
+
