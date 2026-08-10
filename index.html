@@ -3,11 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>FixIt Store</title>
+
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
+
   <body>
-    start project here
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+      <!-- LOGO -->
+
+      <div class="logo">
+        <a href="#">
+          <img src="/assets/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <!-- DESKTOP CATEGORIES -->
+
+      <div class="categories desktop-menu">
+        <ul>
+          <li>
+            <a href="#">Female</a>
+          </li>
+
+          <li>
+            <a href="#">Male</a>
+          </li>
+
+          <li>
+            <a href="product.html">All Products</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DESKTOP RIGHT SIDE -->
+
+      <div class="cart-nav desktop-menu">
+        <a href="#" class="cart-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <a href="#">Login</a>
+
+        <a href="#" class="register-btn"> Register </a>
+      </div>
+
+      <!-- MOBILE RIGHT SIDE -->
+
+      <div class="mobile-nav">
+        <!-- Cart -->
+
+        <a href="#" class="mobile-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <!-- Menu Button -->
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+
+    <aside class="mobile-sidebar" id="mobileSidebar">
+      <!-- Sidebar Header -->
+
+      <div class="sidebar-header">
+        <img src="/assets/logo.png" alt="Logo" />
+
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Sidebar Links -->
+
+      <div class="sidebar-links">
+        <a href="#">
+          Female
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <a href="#">
+          Male
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <a href="product.html">
+          All Products
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+
+      <!-- Sidebar Account -->
+
+      <div class="sidebar-account">
+        <a href="#" class="sidebar-login"> Login </a>
+
+        <a href="#" class="sidebar-register"> Register </a>
+      </div>
+    </aside>
+
+    <!-- OVERLAY -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- hero section -->
+   
+
+    <script src="app.js"></script>
   </body>
-  <script src="/app.js"></script>
 </html>
