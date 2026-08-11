@@ -1,0 +1,610 @@
+.hero-section {
+  width: 100%;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 70px 8%;
+
+  gap: 60px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HERO CONTAINER - LEFT SIDE
+========================================================= */
+
+.hero-container {
+  flex: 1;
+
+  max-width: 620px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   SALE BADGE
+========================================================= */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+
+  margin-bottom: 25px;
+
+  background: #e1edff;
+
+  color: #1e3b8d;
+
+  border: 1px solid #c9dcf7;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  box-shadow: 0 5px 15px rgba(30, 59, 141, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-3px);
+
+  background: #d7e8ff;
+
+  box-shadow: 0 8px 20px rgba(30, 59, 141, 0.12);
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+  margin: 0 0 25px;
+
+  max-width: 650px;
+
+  font-size: clamp(36px, 4.5vw, 60px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  color: #000000;
+}
+
+/* Highlight text if you use <span> */
+
+.hero-title span {
+  color: #57f39d;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 550px;
+
+  margin: 0 0 35px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #555555;
+}
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 52px;
+
+  padding: 0 22px;
+
+  background: #1d1e20;
+
+  color: #ffffff;
+
+  border: 2px solid #1d1e20;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+/* Arrow */
+
+.hero-btn i {
+  font-size: 13px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+
+.hero-btn:hover {
+  background: #000000;
+
+  border-color: #000000;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   HERO IMAGE AREA
+========================================================= */
+
+.hero-image {
+  flex: 1;
+
+  max-width: 450px;
+
+  min-height: 450px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   IMAGE BACKGROUND
+========================================================= */
+
+.hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+
+  height: 450px;
+
+  background: #e1edff;
+
+  border-radius: 50%;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image img {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-section {
+    min-height: 600px;
+
+    padding: 60px 5%;
+
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    min-height: 400px;
+  }
+
+  .hero-image::before {
+    width: 380px;
+
+    height: 380px;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 55px 20px 65px;
+
+    gap: 30px;
+  }
+
+  /* Content */
+
+  .hero-container {
+    width: 100%;
+
+    max-width: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  /* Badge */
+
+  .hero-badge {
+    margin-bottom: 20px;
+
+    padding: 9px 17px;
+
+    font-size: 13px;
+  }
+
+  /* Title */
+
+  .hero-title {
+    max-width: 600px;
+
+    font-size: 44px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+  }
+
+  /* Description */
+
+  .hero-description {
+    max-width: 550px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+  }
+
+  /* Button */
+
+  .hero-btn {
+    min-height: 52px;
+
+    padding: 0 24px;
+
+    font-size: 15px;
+  }
+
+  /*
+     Hide image on mobile
+  */
+
+  .hero-image {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 45px 18px 55px;
+
+    gap: 20px;
+  }
+
+  /* Badge */
+
+  .hero-badge {
+    font-size: 12px;
+
+    padding: 8px 15px;
+
+    margin-bottom: 18px;
+  }
+
+  /* Title */
+
+  .hero-title {
+    font-size: 36px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 18px;
+  }
+
+  /* Description */
+
+  .hero-description {
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    margin-bottom: 25px;
+  }
+
+  /* Button */
+
+  .hero-btn {
+    width: 100%;
+
+    max-width: 230px;
+
+    min-height: 50px;
+
+    font-size: 14px;
+  }
+}
+/* =========================================================
+   HERO SERVICES
+========================================================= */
+
+.hero-services {
+  width: 100%;
+
+  min-height: 110px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 20px 6%;
+
+  margin-top: 20px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #eeeeee;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* =========================================================
+   SERVICE ITEM
+========================================================= */
+
+.service-item {
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 12px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+
+.service-item:hover {
+  border-color: #d5d5d5;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================================================
+   ITEM HEAD
+========================================================= */
+
+.item-head {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.service-icon {
+  width: 45px;
+
+  height: 45px;
+
+  min-width: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f3f4f6;
+
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+
+.service-icon i {
+  font-size: 19px;
+
+  color: #1d1e20;
+}
+
+/* Icon hover */
+
+.service-item:hover .service-icon {
+  background: #57f39d;
+
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   SERVICE TEXT
+========================================================= */
+
+.item-head p {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: #1d1e20;
+}
+
+.item-head span {
+  display: block;
+
+  font-size: 13px;
+
+  color: #777777;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .hero-services {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 20px 5%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .hero-services {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 20px;
+  }
+
+  .service-item {
+    min-height: 70px;
+
+    padding: 12px 18px;
+  }
+
+  .service-icon {
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+  }
+
+  .service-icon i {
+    font-size: 17px;
+  }
+
+  .item-head p {
+    font-size: 14px;
+  }
+
+  .item-head span {
+    font-size: 12px;
+  }
+}

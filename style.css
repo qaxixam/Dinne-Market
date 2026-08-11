@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -583,7 +581,6 @@ body {
   }
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -749,5 +746,925 @@ body {
 @media (max-width: 550px) {
   .Product-Container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* hero section by Qazi Zaid */
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero-section {
+  width: 100%;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 70px 8%;
+
+  gap: 60px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HERO CONTAINER - LEFT SIDE
+========================================================= */
+
+.hero-container {
+  flex: 1;
+
+  max-width: 620px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   SALE BADGE
+========================================================= */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+
+  margin-bottom: 25px;
+
+  background: #e1edff;
+
+  color: #1e3b8d;
+
+  border: 1px solid #c9dcf7;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  box-shadow: 0 5px 15px rgba(30, 59, 141, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-3px);
+
+  background: #d7e8ff;
+
+  box-shadow: 0 8px 20px rgba(30, 59, 141, 0.12);
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+  margin: 0 0 25px;
+
+  max-width: 650px;
+
+  font-size: clamp(36px, 4.5vw, 60px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  color: #000000;
+}
+
+/* Highlight text if you use <span> */
+
+.hero-title span {
+  color: #57f39d;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 550px;
+
+  margin: 0 0 35px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #555555;
+}
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 52px;
+
+  padding: 0 22px;
+
+  background: #1d1e20;
+
+  color: #ffffff;
+
+  border: 2px solid #1d1e20;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+/* Arrow */
+
+.hero-btn i {
+  font-size: 13px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+
+.hero-btn:hover {
+  background: #000000;
+
+  border-color: #000000;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   HERO IMAGE AREA
+========================================================= */
+
+.hero-image {
+  flex: 1;
+
+  max-width: 450px;
+
+  min-height: 450px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   IMAGE BACKGROUND
+========================================================= */
+
+.hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+
+  height: 450px;
+
+  background: #e1edff;
+
+  border-radius: 50%;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image img {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-section {
+    min-height: 600px;
+
+    padding: 60px 5%;
+
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    min-height: 400px;
+  }
+
+  .hero-image::before {
+    width: 380px;
+
+    height: 380px;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 55px 20px 65px;
+
+    gap: 30px;
+  }
+
+  /* Content */
+
+  .hero-container {
+    width: 100%;
+
+    max-width: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  /* Badge */
+
+  .hero-badge {
+    margin-bottom: 20px;
+
+    padding: 9px 17px;
+
+    font-size: 13px;
+  }
+
+  /* Title */
+
+  .hero-title {
+    max-width: 600px;
+
+    font-size: 44px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+  }
+
+  /* Description */
+
+  .hero-description {
+    max-width: 550px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+  }
+
+  /* Button */
+
+  .hero-btn {
+    min-height: 52px;
+
+    padding: 0 24px;
+
+    font-size: 15px;
+  }
+
+  /*
+     Hide image on mobile
+  */
+
+  .hero-image {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 45px 18px 55px;
+
+    gap: 20px;
+  }
+
+  /* Badge */
+
+  .hero-badge {
+    font-size: 12px;
+
+    padding: 8px 15px;
+
+    margin-bottom: 18px;
+  }
+
+  /* Title */
+
+  .hero-title {
+    font-size: 36px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 18px;
+  }
+
+  /* Description */
+
+  .hero-description {
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    margin-bottom: 25px;
+  }
+
+  /* Button */
+
+  .hero-btn {
+    width: 100%;
+
+    max-width: 230px;
+
+    min-height: 50px;
+
+    font-size: 14px;
+  }
+}
+/* =========================================================
+   HERO SERVICES
+========================================================= */
+
+.service-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  color: rgb(92, 83, 83);
+}
+
+.service-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.service-text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.service-icon {
+  font-size: 30px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .service-section {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .service-item {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .service-icon {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .service-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .service-item {
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .service-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .service-text p {
+    font-size: 10px;
+  }
+}
+.brand-section {
+  width: 92%;
+  margin: 30px auto 0;
+  padding: 25px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+}
+
+.brand-item {
+  font-size: 28px;
+  font-weight: 600;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* H&M */
+.brand-item:nth-child(3) {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* Bershka */
+.brand-item:nth-child(5) {
+  font-weight: 500;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .brand-section {
+    width: 94%;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .brand-item {
+    font-size: 22px;
+  }
+
+  .brand-item:nth-child(3) {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .brand-section {
+    width: 92%;
+    padding: 20px 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 10px;
+    border-radius: 12px;
+  }
+
+  .brand-item {
+    font-size: 18px;
+  }
+
+  .brand-item:nth-child(3) {
+    font-size: 20px;
+  }
+}
+/* =========================
+   PROMOTION SECTION
+========================= */
+
+.promotion-section {
+  width: 100%;
+  padding: 60px 5%;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.promotion-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.promotion-heading span {
+  display: block;
+  color: #2457d6;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.promotion-heading h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.promotion-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 8px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   LEFT COLUMN
+========================= */
+
+.promotion-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+}
+
+/* =========================
+   TOP LEFT
+========================= */
+
+.promotion-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #d5dfeb;
+  min-height: 170px;
+  overflow: hidden;
+}
+
+.promotion-content {
+  padding: 20px;
+  z-index: 2;
+}
+
+.promotion-content p {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+.promotion-content p strong {
+  font-size: 25px;
+}
+
+.promotion-content span {
+  font-size: 12px;
+  color: #555;
+}
+
+.promotion-image {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.promotion-image img {
+  height: 165px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   BOTTOM LEFT
+========================= */
+
+.promotion-bottom {
+  background-color: #111a2e;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  min-height: 145px;
+}
+
+.promotion-bottom h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.promotion-bottom p {
+  margin: 0 0 5px;
+  font-size: 9px;
+}
+
+.promotion-bottom strong {
+  background-color: #3c4658;
+  padding: 4px 7px;
+  font-size: 8px;
+}
+
+/* =========================
+   RIGHT PROMOTION CARDS
+========================= */
+
+.promotion-card {
+  position: relative;
+  min-height: 323px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.promotion-card-beige {
+  background-color: #eadfc8;
+}
+
+.promotion-card-gray {
+  background-color: #d8d8da;
+}
+
+/* Card Text */
+
+.card-content {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  z-index: 2;
+}
+
+.card-content p {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-content del {
+  font-size: 8px;
+  margin-right: 3px;
+}
+
+.card-content strong {
+  font-size: 8px;
+}
+
+/* Card Images */
+
+.promotion-card img {
+  height: 280px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .promotion-section {
+    padding: 50px 4%;
+  }
+
+  .promotion-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .promotion-image img {
+    height: 145px;
+  }
+
+  .promotion-card {
+    min-height: 300px;
+  }
+
+  .promotion-card img {
+    height: 205px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .promotion-section {
+    padding: 40px 15px;
+  }
+
+  .promotion-heading {
+    margin-bottom: 18px;
+  }
+
+  .promotion-heading h2 {
+    font-size: 20px;
+  }
+
+  .promotion-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  /* Left section takes full width */
+
+  .promotion-left {
+    grid-column: 1 / -1;
+    grid-template-rows: auto auto;
+  }
+
+  .promotion-top {
+    min-height: 150px;
+  }
+
+  .promotion-image img {
+    height: 145px;
+  }
+
+  .promotion-content {
+    padding: 15px;
+  }
+
+  /* Bottom banner */
+
+  .promotion-bottom {
+    min-height: 120px;
+  }
+
+  .promotion-bottom h3 {
+    font-size: 17px;
+  }
+
+  /* Product cards */
+
+  .promotion-card {
+    min-height: 260px;
+  }
+
+  .promotion-card img {
+    height: 185px;
+  }
+
+  .card-content {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .promotion-section {
+    padding: 35px 10px;
+  }
+
+  .promotion-grid {
+    gap: 6px;
+  }
+
+  .promotion-top {
+    min-height: 135px;
+  }
+
+  .promotion-image img {
+    height: 130px;
+  }
+
+  .promotion-content {
+    padding: 12px;
+  }
+
+  .promotion-content p {
+    font-size: 10px;
+  }
+
+  .promotion-content p strong {
+    font-size: 13px;
+  }
+
+  .promotion-card {
+    min-height: 230px;
+  }
+
+  .promotion-card img {
+    height: 165px;
+  }
+
+  .promotion-bottom {
+    min-height: 110px;
+  }
+
+  .promotion-bottom h3 {
+    font-size: 15px;
   }
 }
