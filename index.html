@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -244,4 +245,138 @@
 
     <script src="app.js"></script>
   </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIt Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="All_Product.html">
+                <img src="assets/logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- DESKTOP CATEGORIES -->
+        <div class="categories desktop-menu">
+            <ul>
+                <li><a href="All_Product.html">All Products</a></li>
+                <li><a href="jewelery.html">Jewelery</a></li>
+                <li><a href="Electronic.html">Electronic</a></li>
+                <li><a href="WomenClothes.html">Women Clothes</a></li>
+            </ul>
+        </div>
+
+        <!-- DESKTOP RIGHT SIDE -->
+        <div class="cart-nav desktop-menu">
+            <a href="#" class="cart-link" id="cartLink">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="desktopCartBadge">0</span>
+            </a>
+            <a href="#">Login</a>
+            <a href="#" class="register-btn">Register</a>
+        </div>
+
+        <!-- MOBILE RIGHT SIDE -->
+        <div class="mobile-nav">
+            <!-- Cart -->
+            <a href="#" class="mobile-cart" id="mobileCartLink">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="mobileCartBadge">0</span>
+            </a>
+            <!-- Menu Button -->
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+    <aside class="mobile-sidebar" id="mobileSidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="Logo" />
+            <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Sidebar Links -->
+        <div class="sidebar-links">
+            <a href="All_Product.html">
+                All Products
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a href="jewelery.html">
+                Jewelery
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a href="Electronic.html">
+                Electronic
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a href="WomenClothes.html">
+                Women Clothes
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <!-- Sidebar Account -->
+        <div class="sidebar-account">
+            <a href="#" class="sidebar-login">Login</a>
+            <a href="#" class="sidebar-register">Register</a>
+        </div>
+    </aside>
+
+    <!-- OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ================= CART SIDEBAR ================= -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="sidebar-header">
+            <h2>Shopping Cart <span id="cartHeaderCount">(0)</span></h2>
+            <button class="close-btn" id="closeCartBtn" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Dynamic Cart Items -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total Amount:</span>
+                <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </aside>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="page-header">
+        <h1 class="page-title">All Products</h1>
+    </div>
+
+    <div class="Product-Container" data-category="all">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+>>>>>>> e7927b92372c60a847e22429d3352956c080e78e
 </html>
