@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FixIt Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Yaha Add karo  -->
+
+    <main class="checkout-wrapper  ">
+        <h1 class="checkout-main-title">Checkout</h1>
+
+        <div class="checkout-container">
+            <div class="checkout-left">
+                <div class="checkout-steps-header">
+                    <div class="step-indicator active" id="stepShippingHeader">
+                        <span class="step-icon"><i class="fa-solid fa-box"></i></span>
+                        <span class="step-label">Shipping</span>
+                    </div>
+                    <div class="step-indicator" id="stepPaymentHeader">
+                        <span class="step-icon"><i class="fa-regular fa-credit-card"></i></span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
+
+                <form id="shippingForm" class="checkout-step-content active">
+                    <h2>Shipping Information</h2>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="123 Main St" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="New York" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" id="zipCode" placeholder="10001" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-btn">Next &rarr;</button>
+                </form>
+
+                <!-- STEP 2: Payment Form -->
+                <form id="paymentForm" class="checkout-step-content">
+                    <h2>Payment Information</h2>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" required maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" placeholder="123" required maxlength="4">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-btn">Place Order</button>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: Order Summary -->
+            <div class="checkout-right">
+                <div class="order-summary-card">
+                    <h2>Order Summary</h2>
+                    <p class="summary-sub">Review your order details</p>
+
+                    <div id="checkoutSummaryItems" class="summary-items-list">
+                        <!-- Dynamic Cart Items Render Honge -->
+                    </div>
+
+                    <p class="discount-note" id="discountNote" style="display: none;">
+                        10% discount applied for orders over $100
+                    </p>
+
+                    <div class="summary-row">
+                        <span>Total</span>
+                        <span id="summarySubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span id="summaryDiscount">$0.00</span>
+                    </div>
+                    <div class="summary-row final-total">
+                        <span>Final Total</span>
+                        <span id="summaryFinalTotal">$0.00</span>
+                    </div>
+
+                    <p class="terms-text">
+                        By placing your order, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
